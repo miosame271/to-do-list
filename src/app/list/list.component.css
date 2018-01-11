@@ -1,0 +1,86 @@
+.new-item-block {
+  margin-bottom: 3.5rem;
+}
+
+.new-item-block button {
+  font: 1rem/1 "Open Sans", sans-serif;
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+  vertical-align: top;
+}
+
+.text-label input[type=text] {
+  font: .75rem/1 "Open Sans", sans-serif;
+  width: 450px;
+  height: 2.5rem;
+  border: .125rem solid #ccc;
+  border-radius: .25rem;
+  padding: 0 1rem;
+  margin-right: .75rem;
+}
+
+.list-item {
+  position: relative;
+}
+
+.list-item:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.list-item button {
+  font: 1.25rem/1 "Open Sans", sans-serif;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: transparent;
+  position: absolute;
+  top: .75rem;
+  right: .5rem;
+}
+
+.checkbox-label {
+  display: block;
+  background: #efefef;
+  padding: .75rem 2rem .75rem 2.75rem;
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+.checkbox-label:hover,
+.checkbox-label:active {
+  background: #dedede;
+}
+
+.checkbox-label.checked {
+  padding-right: .5rem;
+}
+
+.checkbox-label::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border: .125rem solid #ccc;
+  border-radius: .25rem;
+  position: absolute;
+  top: .85rem;
+  left: .65rem;
+}
+
+.checkbox-label::after {
+  content: "";
+  opacity: 0;
+  width: .75rem;
+  height: .75rem;
+  background: #ccc;
+  border-radius: .125rem;
+  position: absolute;
+  top: 1.15rem;
+  left: .88rem;
+}
+
+.checkbox-label.checked::after {
+  opacity: 1;
+}
+
+.checkbox-label input[type=checkbox] {
+  display: none;
+}

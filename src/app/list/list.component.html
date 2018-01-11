@@ -1,14 +1,36 @@
+<div class="new-item-block">
+    <label class="text-label" for="new">
+        <input type="text" placeholder="Например, купить молока" id="new" #newItemText>
+    </label>
+    <button type="button" class="btn" (click)="addNewItem(newItemText.value); newItemText.value=''">
+        Добавить
+    </button>
+</div>
 <div class="row">
     <div class="col-1-2">
         <h2>Не сделано:</h2>
+
+        <ng-container *ngFor="let item of toDoList">
+            <div class="list-item" *ngIf="!(item.isDone)">
+                <label class="checkbox-label" (click)="markItem(item)" for="ch-to-do-{{item.id}}">
+                    <input type="checkbox" id="ch-to-do-{{item.id}}">
+                    {{item.text}}
+                </label>
+                <button type="button" *ngIf="!(item.isDone)" (click)="removeItem(item)">X</button>
+            </div>
+        </ng-container>
     </div>
 
     <div class="col-1-2">
         <h2>Готово!</h2>
 
-        <label *ngFor="let item of toDoList" [class.checked]="item.isDone" (click)="mark(item)" for="checkbox-{{item.id}}">
-            <input type="checkbox" id="checkbox-{{item.id}}" [checked]="item.isDone">
-            {{item.text}}
-        </label>
+        <ng-container *ngFor="let item of toDoList">
+            <div class="list-item" *ngIf="(item.isDone)">
+                <label class="checkbox-label checked" (click)="markItem(item)" for="ch-done-{{item.id}}">
+                    <input type="checkbox" id="ch-done-{{item.id}}" checked>
+                    {{item.text}}
+                </label>
+            </div>
+        </ng-container>
     </div>
 </div>

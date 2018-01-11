@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('//fonts.googleapis.com/css?family=Open+Sans|Oswald:500&subset=cyrillic');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 16px/1.5 "Open Sans", sans-serif;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font: 2.5rem/1 "Oswald", sans-serif;
+  margin: 2.25rem 0;
+}
+
+h2 {
+  font: 2rem/1 "Oswald", sans-serif;
+  margin: 0 0 1.5rem;
+}
+
+.row {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1-2 {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  padding: 0 2rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  background: #fff;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
